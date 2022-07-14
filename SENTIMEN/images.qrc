@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="bg">
+    <file>BG.webp</file>
+    <file>BG2.webp</file>
+  </qresource>
+</RCC>

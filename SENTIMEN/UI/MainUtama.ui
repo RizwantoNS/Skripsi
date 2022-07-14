@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="txtJudul">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>782</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Sentimen Genshin Impact</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QToolButton" name="btnPilihTeks">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Pilih File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txtPilihFile">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblTimer">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Loading</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="pB">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>440</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>HASIL</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QStackedWidget" name="stackedWidget">
+           <property name="currentIndex">
+            <number>10</number>
+           </property>
+           <widget class="PreWidget" name="preprocessing"/>
+           <widget class="CaseWidget" name="casefolding"/>
+           <widget class="TokenWidget" name="tokenizing"/>
+           <widget class="StopwordWidget" name="stopword"/>
+           <widget class="StemmingWidget" name="stemming"/>
+           <widget class="IDFWidget" name="tfidf"/>
+           <widget class="ISFWidget" name="tfisf"/>
+           <widget class="CosineWidget" name="cosine"/>
+           <widget class="KmeansWidget" name="kmeans"/>
+           <widget class="KnnWidget" name="knn"/>
+           <widget class="EvaluasiWidget" name="evaluasi"/>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PreWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/preprocessing</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CaseWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/casefolding</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TokenWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/tokenizing</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StopwordWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/stopword</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StemmingWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/stemming</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>IDFWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/tfidf</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ISFWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/tfisf</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CosineWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/cosine</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KmeansWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/kmeans</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KnnWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/knn</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EvaluasiWidget</class>
+   <extends>QWidget</extends>
+   <header>pages/evaluasi</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

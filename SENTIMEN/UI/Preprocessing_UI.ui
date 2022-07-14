@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Preprocessing</class>
+ <widget class="QWidget" name="Preprocessing">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>926</width>
+    <height>719</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Preprocessing</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font-family:century gothic;
+}
+
+QWidget
+{
+background-image: url(:/bg/BG2.webp);
+/* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+QProgressBar
+{
+border:none;
+border-radius: 10px;
+border: 1px solid grey;
+text-align: center
+}
+
+QProgressBar::chunk {
+    background-color: #4CC417;
+    margin-left: 0px;
+	border-radius: 8px;
+}
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>48</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>48</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame
+{
+	background:rgba(0, 0, 0, 0.8);
+	border-radius:10px;
+	opacity: 0.5;
+}
+
+QLabel
+{
+color:white;
+font-size:16px;
+background:transparent;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Hasil Preprocessing</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="styleSheet">
+      <string notr="true">QFrame
+{
+	background:rgba(255, 255, 255, 0.8);
+	border-radius:10px;
+	opacity: 0.5;
+}
+
+QPushButton
+{
+border-radius:15px;
+font-size:18px;
+color: white;
+background:transparent;
+}
+
+
+QToolButton
+{
+background:transparent;
+border-radius:40px;
+background:transparent;
+}
+
+QLabel
+{
+color:black;
+font-size:12px;
+background:transparent;
+}
+
+QLineEdit
+{
+background:transparent;
+border:none;
+color:#717072;
+border-bottom:1px solid #717072;
+}
+
+QTableView
+{
+background:rgba(234, 226, 223, 0.4);
+border:none;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTableView" name="tableViewCaseFolding"/>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableViewTokenizing"/>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableViewStopword"/>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableViewStemming"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
